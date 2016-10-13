@@ -5,10 +5,10 @@ using System.Text;
 
 namespace V1_Laboration2
 {
-    public class Mammal : Animal
+    public class Spider : Arthropod
     {
 
-        public string Diet { get; set; }
-        public bool CanDressInSuit { get; set; }
+        public int NumberOfEyes { get; set; }
+        public string Color { get; set; }
     }
 }

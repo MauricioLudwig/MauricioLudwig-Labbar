@@ -5,10 +5,10 @@ using System.Text;
 
 namespace V1_Laboration2
 {
-    public class Mammal : Animal
+    public class Human : Mammal
     {
 
-        public string Diet { get; set; }
-        public bool CanDressInSuit { get; set; }
+        public string Ethnicity { get; set; }
+        public double Height { get; set; }
     }
 }

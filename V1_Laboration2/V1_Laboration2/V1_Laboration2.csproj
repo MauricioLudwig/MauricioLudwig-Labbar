@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6527466B-E9C1-48C6-BACA-24C39CC295AC}</ProjectGuid>
+    <ProjectGuid>{18F6F644-D0A7-4624-8960-8B2A70D901A6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>V1_Laboration2</RootNamespace>
@@ -44,21 +44,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="Arthropod.cs" />
+    <Compile Include="Bear.cs" />
     <Compile Include="Fish.cs" />
-    <Compile Include="Fish\GreatWhiteShark.cs" />
-    <Compile Include="Fish\SwordFish.cs" />
+    <Compile Include="Shark.cs" />
+    <Compile Include="Human.cs" />
     <Compile Include="Mammal.cs" />
-    <Compile Include="Mammal\Bear.cs" />
-    <Compile Include="Mammal\Whale.cs" />
+    <Compile Include="Menus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime.cs" />
+    <Compile Include="Scorpion.cs" />
+    <Compile Include="Spider.cs" />
+    <Compile Include="SmallFish.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AnimalKingdom.cd" />
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Arthropod\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

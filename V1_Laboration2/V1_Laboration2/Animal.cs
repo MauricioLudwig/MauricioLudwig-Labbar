@@ -2,11 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace V1_Laboration2
 {
-    class Animal
+    public abstract class Animal
     {
+
+        public int Age { get; set; }
+        public double Weight { get; set; }
+        public bool WarmBlooded { get; set; }
+
+
+        public virtual void TypeOfMovement()
+        {
+
+        }
+
     }
 }
