@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace V1_Laboration2
 {
-    class Menus
+    class Animal
     {
-
-        public static void MainMenu()
-        {
-
-        }
     }
 }

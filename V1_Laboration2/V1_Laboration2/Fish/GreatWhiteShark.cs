@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace V1_Laboration2
+namespace V1_Laboration2.Fish
 {
-    class TextColor
+    class GreatWhiteShark
     {
     }
 }
