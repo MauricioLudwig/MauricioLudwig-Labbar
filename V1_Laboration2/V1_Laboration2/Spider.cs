@@ -8,7 +8,18 @@ namespace V1_Laboration2
     public class Spider : Arthropod
     {
 
-        public int NumberOfEyes { get; set; }
-        public string Color { get; set; }
+        public bool BitPeterParker { get; set; }
+        public bool Venomous { get; set; }
+
+        public override void MannerOfCommunication()
+        {
+            base.MannerOfCommunication();
+        }
+
+        public override void MannerOfMovement()
+        {
+            base.MannerOfMovement();
+        }
+
     }
 }

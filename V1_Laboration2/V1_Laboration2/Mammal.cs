@@ -9,6 +9,7 @@ namespace V1_Laboration2
     {
 
         public string Diet { get; set; }
-        public bool CanDressInSuit { get; set; }
+        public int NumberOfTeeth { get; set; }
+
     }
 }

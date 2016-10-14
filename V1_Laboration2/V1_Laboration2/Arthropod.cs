@@ -10,5 +10,6 @@ namespace V1_Laboration2
 
         public int NumberOfLegs { get; set; }
         public bool ExoSkeleton { get; set; }
+
     }
 }

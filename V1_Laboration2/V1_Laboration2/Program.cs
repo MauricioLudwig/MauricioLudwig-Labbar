@@ -11,6 +11,7 @@ namespace V1_Laboration2
         static void Main(string[] args)
         {
 
+            // Instantiate Runtime and invoke its Start method
             var runtime = new Runtime();
             runtime.Start();
 

@@ -10,10 +10,14 @@ namespace V1_Laboration2
 
         public int Age { get; set; }
         public double Weight { get; set; }
-        public bool WarmBlooded { get; set; }
+        public string Species { get; set; }
 
+        public virtual void MannerOfMovement()
+        {
 
-        public virtual void TypeOfMovement()
+        }
+
+        public virtual void MannerOfCommunication()
         {
 
         }
