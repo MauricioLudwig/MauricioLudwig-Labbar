@@ -3,21 +3,21 @@
   <Class Name="V1_Laboration2.Animal">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAEAAAAAEACAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAkAAAAAAAAAAAAAEAAAAAAACAAAAAAAAAAAAAAACA=</HashCode>
       <FileName>Animal.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V1_Laboration2.Fish">
     <Position X="6.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Fish.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V1_Laboration2.Mammal">
     <Position X="4.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Mammal.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,42 +31,42 @@
   <Class Name="V1_Laboration2.Shark">
     <Position X="7" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AABgAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAACA=</HashCode>
       <FileName>Shark.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="V1_Laboration2.SmallFish">
+  <Class Name="V1_Laboration2.JawlessFish">
     <Position X="8.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
-      <FileName>SmallFish.cs</FileName>
+      <HashCode>AAAgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAgAAAACA=</HashCode>
+      <FileName>JawlessFish.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V1_Laboration2.Spider">
     <Position X="0.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAgAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAAgAAAAAAACA=</HashCode>
       <FileName>Spider.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V1_Laboration2.Scorpion">
     <Position X="2" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAACA=</HashCode>
       <FileName>Scorpion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V1_Laboration2.Bear">
     <Position X="3.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAACA=</HashCode>
       <FileName>Bear.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V1_Laboration2.Human">
     <Position X="5.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAABAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAACA=</HashCode>
       <FileName>Human.cs</FileName>
     </TypeIdentifier>
   </Class>

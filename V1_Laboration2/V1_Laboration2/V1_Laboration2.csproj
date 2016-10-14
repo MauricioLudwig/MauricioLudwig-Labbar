@@ -56,7 +56,8 @@
     <Compile Include="Runtime.cs" />
     <Compile Include="Scorpion.cs" />
     <Compile Include="Spider.cs" />
-    <Compile Include="SmallFish.cs" />
+    <Compile Include="JawlessFish.cs" />
+    <Compile Include="TextColors.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AnimalKingdom.cd" />
