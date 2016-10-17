@@ -30,5 +30,26 @@ namespace V1_Laboration2
             Console.ResetColor();
         }
 
+        public static void Blue(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write(text);
+            Console.ResetColor();
+        }
+
+        public static void Cyan(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write(text);
+            Console.ResetColor();
+        }
+
+        public static void White(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(text);
+            Console.ResetColor();
+        }
+
     }
 }

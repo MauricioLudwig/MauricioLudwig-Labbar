@@ -5,7 +5,7 @@ using System.Text;
 
 namespace V1_Laboration2
 {
-    public class Mammal : Animal
+    public abstract class Mammal : Animal
     {
 
         public string Diet { get; set; }

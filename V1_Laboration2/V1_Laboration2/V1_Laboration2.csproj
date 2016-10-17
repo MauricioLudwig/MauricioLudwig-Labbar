@@ -44,19 +44,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="AnimalManager.cs" />
     <Compile Include="Arthropod.cs" />
-    <Compile Include="Bear.cs" />
+    <Compile Include="BearManager.cs" />
     <Compile Include="Fish.cs" />
     <Compile Include="Shark.cs" />
-    <Compile Include="Human.cs" />
+    <Compile Include="Bear.cs" />
     <Compile Include="Mammal.cs" />
     <Compile Include="Menus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime.cs" />
-    <Compile Include="Scorpion.cs" />
+    <Compile Include="SharkManager.cs" />
     <Compile Include="Spider.cs" />
-    <Compile Include="JawlessFish.cs" />
+    <Compile Include="SpiderManager.cs" />
     <Compile Include="TextColors.cs" />
   </ItemGroup>
   <ItemGroup>

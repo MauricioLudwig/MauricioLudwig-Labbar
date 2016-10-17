@@ -5,11 +5,11 @@ using System.Text;
 
 namespace V1_Laboration2
 {
-    public class Arthropod : Animal
+    public abstract class Arthropod : Animal
     {
 
         public int NumberOfLegs { get; set; }
-        public bool ExoSkeleton { get; set; }
+        public string Color { get; set; }
 
     }
 }
