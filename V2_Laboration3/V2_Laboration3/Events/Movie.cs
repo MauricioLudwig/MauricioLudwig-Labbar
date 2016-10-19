@@ -8,7 +8,7 @@ namespace V2_Laboration3
     public class Movie : Event
     {
 
-        public string Genre { get; set; }
+        public bool is3D { get; set; }
         public int MetaScore { get; set; }
 
     }

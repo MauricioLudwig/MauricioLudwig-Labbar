@@ -1,31 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Added Comic Con class and intentionally left it empty so I could test Try &amp; Catch in the EventManager class.">
+    <Position X="7.956" Y="5.323" Height="0.611" Width="2.494" />
+  </Comment>
   <Class Name="V2_Laboration3.Event">
-    <Position X="3.75" Y="1" Width="1.5" />
+    <Position X="4.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAAAAIAABAAAAAEAAAAA=</HashCode>
-      <FileName>Event.cs</FileName>
+      <FileName>Events\Event.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration3.Movie">
     <Position X="1.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Movie.cs</FileName>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\Movie.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration3.Concert">
     <Position X="3.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Concert.cs</FileName>
+      <FileName>Events\Concert.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration3.Theater">
     <Position X="6" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Theater.cs</FileName>
+      <HashCode>AAAAAAAAAAAAgAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\Theater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="V2_Laboration3.ComicCon">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\ComicCon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

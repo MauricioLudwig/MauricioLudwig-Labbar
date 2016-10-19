@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace V2_Laboration3
 {
-    public class Theater : Event
+    class ComicCon : Event
     {
-
-        public string Epoch { get; set; }
-        public int NumOfActs { get; set; }
     }
 }

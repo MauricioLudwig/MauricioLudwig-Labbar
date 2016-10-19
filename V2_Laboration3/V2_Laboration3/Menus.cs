@@ -14,8 +14,10 @@ namespace V2_Laboration3
             Console.WriteLine("1. Concert");
             Console.WriteLine("2. Movie");
             Console.WriteLine("3. Theater");
-            Console.WriteLine("4. Your Bookings");
-            Console.WriteLine("5. Exit Program");
+            Console.WriteLine("4. Comic Con");
+            Console.WriteLine();
+            Console.WriteLine("5. Show Bookings");
+            Console.WriteLine("6. Exit Program");
         }
     }
 }

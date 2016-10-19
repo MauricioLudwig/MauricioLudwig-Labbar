@@ -14,7 +14,13 @@ namespace V2_Laboration3
 
         public virtual string DateFormat()
         {
-            return "";
+            string year, month, day;
+            string[] splitDate = Date.Split('/');
+            year = splitDate[0];
+            month = splitDate[1];
+            day = splitDate[2];
+
+            return String.Format("Year: {0} Day: {1}/{2}", year, day, month);
         }
 
         public virtual string BookingInfo()

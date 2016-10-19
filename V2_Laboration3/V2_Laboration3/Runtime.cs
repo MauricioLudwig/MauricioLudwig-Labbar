@@ -13,6 +13,8 @@ namespace V2_Laboration3
         {
 
             EventManager eventManager = new EventManager();
+            Person person = new Person();
+
             bool DisplayMainMenu = true;
 
             while (DisplayMainMenu)
@@ -21,33 +23,35 @@ namespace V2_Laboration3
                 Console.Clear();
                 Menus.MainMenu();
 
-                Console.Write(Environment.NewLine + "Choice: ");
-                int choice = int.Parse(Console.ReadLine());
+                int choice = ValidateInput.ValidateInteger(1, 6);
 
                 switch (choice)
                 {
-                    // Concert
-                    case 1:
+                    case 1: // Concert
+                        eventManager.ShowAvailableBookings(eventManager.Concerts);
                         break;
-                    // Movie
-                    case 2:
+                    case 2: // Movie
+                        eventManager.ShowAvailableBookings(eventManager.Movies);
                         break;
-                    // Theater
-                    case 3:
+                    case 3: // Theater
+                        eventManager.ShowAvailableBookings(eventManager.Theaters);
                         break;
-                    // Your Bookings
-                    case 4:
+                    case 4: // Comic Con
+                        eventManager.ShowAvailableBookings(eventManager.ComicCons);
                         break;
-                    // Exit Program
-                    case 5:
+                    case 5: // Show Bookings
+                        person.ShowBookings();
+                        break;
+                    case 6: // Exit Program
                         DisplayMainMenu = false;
                         break;
                     default:
-                        Console.WriteLine("This message should not display on the console window.");
+                        Console.WriteLine("This message should never display on the console window.");
                         break;
                 }
             }
 
+
         }
-    }
-}
+    } // Class
+} // Namespace
