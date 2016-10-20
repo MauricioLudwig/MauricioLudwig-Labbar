@@ -9,23 +9,13 @@ namespace V2_Laboration3
     class Person
     {
 
-        public string Name { get; set; }
-        public string Mail { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public List<Event> MyBookings { get; set; }
 
-        public void ShowBookings()
+        public Person()
         {
-            Console.Clear();
-
-            try
-            {
-
-            }
-
-            catch
-            {
-
-            }
-
+            MyBookings = new List<Event>();
         }
     }
 }

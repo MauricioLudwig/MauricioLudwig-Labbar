@@ -12,79 +12,58 @@ namespace V2_Laboration3
         public List<Concert> Concerts { get; set; } 
         public List<Theater> Theaters { get; set; }
         public List<Movie> Movies { get; set; }
-        public List<ComicCon> ComicCons { get; set; }
+        public int Index { get; set; }
 
         public EventManager()
         {
 
+            // Create 3 objects of Concert upon initializing EventManager
             #region Concert Listings
             Concerts = new List<Concert>
             {
-                new Concert() { Name = "Oasis",              Fee = 150, Date = "2016/12/31", Location = "Stockholm", Outdoors = true  },
-                new Concert() { Name = "Elton John",         Fee = 200, Date = "2017/10/18", Location = "Paris",     Outdoors = false },
-                new Concert() { Name = "The Stone Roses",    Fee = 300, Date = "2020/01/01", Location = "Barcelona", Outdoors = true  },
-                new Concert() { Name = "The Rolling Stones", Fee = 400, Date = "2017/07/06", Location = "New York",  Outdoors = false }
+                new Concert() { Name = "Oasis",              EventID = "Concert", Fee = 150, Date = new DateTime(2016, 12, 31), Location = "Stockholm", Outdoors = true  },
+                new Concert() { Name = "Elton John",         EventID = "Concert", Fee = 200, Date = new DateTime(2017, 10, 18), Location = "Paris",     Outdoors = false },
+                new Concert() { Name = "The Stone Roses",    EventID = "Concert", Fee = 300, Date = new DateTime(2020, 01, 01), Location = "Barcelona", Outdoors = true  }
             };
             #endregion
 
+            // Create 3 objects of Theater upon initializing EventManager
             #region Theater Listings
             Theaters = new List<Theater>()
             {
-                new Theater() { Name = "The Book of Mormon",       Fee = 200, Date = "2018/12/01", Genre = "Comedy",  NumOfActs = 10 },
-                new Theater() { Name = "Hamlet",                   Fee = 300, Date = "2016/12/24", Genre = "Tragedy", NumOfActs = 11 },
-                new Theater() { Name = "Macbeth",                  Fee = 400, Date = "2017/08/08", Genre = "Tragedy", NumOfActs = 12 },
-                new Theater() { Name = "A Streetcar Named Desire", Fee = 500, Date = "2017/04/04", Genre = "Drama",   NumOfActs = 13 }
+                new Theater() { Name = "The Book of Mormon",       EventID = "Theater", Fee = 200, Date = new DateTime(2018, 12, 01), Genre = "Comedy",  NumOfActs = 10 },
+                new Theater() { Name = "Hamlet",                   EventID = "Theater", Fee = 300, Date = new DateTime(2016, 12, 24), Genre = "Tragedy", NumOfActs = 11 },
+                new Theater() { Name = "A Streetcar Named Desire", EventID = "Theater", Fee = 400, Date = new DateTime(2017, 08, 08), Genre = "Drama",   NumOfActs = 12 }
             };
             #endregion
 
+            // Create 3 objects of Movie upon initializing EventManager
             #region Movie Listings
             Movies = new List<Movie>()
             {
-                new Movie() { Name = "Arrival",                      Fee = 120, Date = "2016/12/02", is3D = true,  MetaScore = 80 },
-                new Movie() { Name = "Rogue One: A Star Wars Story", Fee = 150, Date = "2016/12/14", is3D = true,  MetaScore = 50 },
-                new Movie() { Name = "Passengers",                   Fee = 180, Date = "2016/12/21", is3D = false, MetaScore = 77 },
-                new Movie() { Name = "Assasin's Creed",              Fee = 200, Date = "2017/01/13", is3D = true,  MetaScore = 65 },
-                new Movie() { Name = "Batman v Justice League",      Fee = 350, Date = "2020/01/01", is3D = true,  MetaScore = 50 }
+                new Movie() { Name = "Arrival",                      EventID = "Movie", Fee = 120, Date = new DateTime(2016, 12, 02), is3D = true,  MetaScore = 80 },
+                new Movie() { Name = "Rogue One: A Star Wars Story", EventID = "Movie", Fee = 150, Date = new DateTime(2016, 12, 14), is3D = true,  MetaScore = 50 },
+                new Movie() { Name = "Passengers",                   EventID = "Movie", Fee = 180, Date = new DateTime(2016, 12, 21), is3D = false, MetaScore = 77 }
             };
             #endregion
-
         }
 
-        public void ShowAvailableBookings(IEnumerable<dynamic> availableBookings)
+        public void AvailableConcerts(Concert concert)
         {
-            Console.Clear();
-            int index = 1;
-            int choice;
-
-            try
-            {
-                foreach (var availableBooking in availableBookings)
-                {
-                    Console.WriteLine("{0}. {1}", index++, availableBooking.Name);
-                }
-                Console.WriteLine(Environment.NewLine + "{0}. Return", index);
-
-                choice = ValidateInput.ValidateInteger(1, index);
-
-                if (availableBookings.GetType() == typeof(Movie))
-                    Console.WriteLine("This is cinema!");
-                Console.ReadKey();
-
-                if (choice != index)
-                    ConfirmReservation(choice);
-            }
-            catch
-            {
-                Console.Clear();
-                TextColor.Red("No available bookings at this time. Sorry!");
-                Console.WriteLine(Environment.NewLine + Environment.NewLine +
-                    "Press enter to return to main menu.");
-                Console.ReadKey();
-            }
+            Console.WriteLine("{0}. " + concert.EventDescription(), Index++);
+            Console.WriteLine();
         }
 
-        public void ConfirmReservation(int choice)
+        public void AvailableTheaters(Theater theater)
         {
+            Console.WriteLine("{0}. " + theater.EventDescription(), Index++);
+            Console.WriteLine();
+        }
+
+        public void AvailableMovies(Movie movie)
+        {
+            Console.WriteLine("{0}. " + movie.EventDescription(), Index++);
+            Console.WriteLine();
         }
 
     }

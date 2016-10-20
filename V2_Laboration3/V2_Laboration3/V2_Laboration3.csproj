@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Events\ComicCon.cs" />
     <Compile Include="EventManager.cs" />
     <Compile Include="Menus.cs" />
     <Compile Include="Events\Movie.cs" />
@@ -59,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagramEvents.cd" />
+    <None Include="Events\ClassDiagramEvents.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

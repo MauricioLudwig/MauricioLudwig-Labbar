@@ -8,24 +8,24 @@ namespace V2_Laboration3
     public abstract class Event
     {
 
-        public float Fee { get; set; }
-        public string Date { get; set; }
         public string Name { get; set; }
+        public string EventID { get; set; }
+        public int Fee { get; set; }
+        public DateTime Date { get; set; }
 
-        public virtual string DateFormat()
+        public virtual string EventDescription()
         {
-            string year, month, day;
-            string[] splitDate = Date.Split('/');
-            year = splitDate[0];
-            month = splitDate[1];
-            day = splitDate[2];
-
-            return String.Format("Year: {0} Day: {1}/{2}", year, day, month);
+            return String.Format("{0}" + Environment.NewLine +
+                "Date: {1}" + Environment.NewLine +
+                "Fee: {2}",
+                Name,
+                PrintDate(),
+                Fee);
         }
 
-        public virtual string BookingInfo()
+        public string PrintDate()
         {
-            return "";
-        } 
+            return String.Format("{0:dd/MM/yyyy}", Date);
+        }
     }
 }

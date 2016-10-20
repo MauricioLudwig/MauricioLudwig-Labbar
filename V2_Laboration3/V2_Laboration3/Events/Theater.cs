@@ -10,5 +10,15 @@ namespace V2_Laboration3
 
         public string Genre { get; set; }
         public int NumOfActs { get; set; }
+
+        public override string EventDescription()
+        {
+            return String.Format("{0}" + Environment.NewLine +
+                "This play has {1} acts." + Environment.NewLine +
+                "Genre: {2}",
+                base.EventDescription(),
+                NumOfActs,
+                Genre);
+        }
     }
 }
