@@ -10,7 +10,6 @@ namespace V2_Laboration4
     {
         static void Main(string[] args)
         {
-
             Runtime runtime = new Runtime();
             runtime.Start();
 

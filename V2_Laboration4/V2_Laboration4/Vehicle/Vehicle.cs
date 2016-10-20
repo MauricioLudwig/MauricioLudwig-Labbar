@@ -9,20 +9,20 @@ namespace V2_Laboration4
     {
 
         public string Color { get; set; }
-        public string Brand { get; set; }
-        public string Modell { get; set; } 
+        public string Manufacturer { get; set; }
+        public string Model { get; set; }
         public int Year { get; set; }
         public bool Used { get; set; }
         public float Price { get; set; }
 
-        public virtual string PrintVehicle()
+        public virtual string VehicleInfo()
         {
             return "";
         }
 
-        public virtual float UsedCarRevisedPrice()
+        public virtual float VehicleListing()
         {
-            return 2F;
+            return 0F;
         }
     }
 }
