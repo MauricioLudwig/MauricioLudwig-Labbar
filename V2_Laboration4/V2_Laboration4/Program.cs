@@ -14,6 +14,7 @@ namespace V2_Laboration4
             Runtime runtime = new Runtime();
             runtime.Start();
 
+            Console.Clear();
             Console.WriteLine("You have reached the end of the program.");
             Console.ReadKey();
         }

@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pedantry\TextColor.cs" />
+    <Compile Include="Pedantry\ValidateInput.cs" />
     <Compile Include="Vehicle\Car.cs" />
     <Compile Include="Vehicle\Motorcycle.cs" />
     <Compile Include="Program.cs" />
