@@ -13,11 +13,18 @@ namespace V2_Laboration4
         public string Model { get; set; }
         public int Year { get; set; }
         public int Price { get; set; }
+        public string Category { get; set; }
 
         public virtual string VehicleDescription()
         {
-            return String.Format("Manufacturer: {0,-15} Model: {1,-15} Year: {2,-10} Color: {3,-10} Price: {4}",
+            return String.Format("{0,-15} {1,-15} {2,-10} {3,-10} {4}",
                 Manufacturer, Model, Year, Color, Price);
+        }
+
+        public static void VehicleLabel()
+        {
+            Console.WriteLine("{0,-15} {1,-15} {2,-10} {3,-10} {4}" + Environment.NewLine,
+                "Manufacturer", "Model", "Year", "Color", "Price");
         }
 
     }

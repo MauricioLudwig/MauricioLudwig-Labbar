@@ -32,5 +32,15 @@ namespace V2_Laboration4
 
             Choice = ValidateInput.Integer(1, 4);
         }
+
+        public void BuyOrSellMenu()
+        {
+            Console.WriteLine("1. Buy");
+            Console.WriteLine("2. Sell");
+            Console.WriteLine("3. Return");
+
+            Choice = ValidateInput.Integer(1, 3);
+        }
+
     }
 }

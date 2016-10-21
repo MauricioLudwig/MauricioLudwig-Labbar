@@ -14,12 +14,19 @@ namespace V2_Laboration4
 
             VehicleManager vehicleMgr = new VehicleManager();
             Menus menu = new Menus();
+            ExternalVendor externalVendor = new ExternalVendor();
+
+            List<Vehicle> carsForSale = new List<Vehicle>();
+            carsForSale.AddRange(externalVendor.VendorsCars);
+            carsForSale.AddRange(externalVendor.VendorsMotorcycles);
 
             bool continueLoop = true;
             while (continueLoop)
             {
 
                 Console.Clear();
+                // FIX
+                vehicleMgr.Overview();
                 menu.MainMenu();
                 switch (menu.Choice)
                 {
@@ -94,6 +101,14 @@ namespace V2_Laboration4
 
                     #region 3. Buy/Sell
                     case 3:
+                        Console.Clear();
+                        // FIX
+                        vehicleMgr.DisplayVehiclesOnSale();
+                        menu.BuyOrSellMenu();
+                        if (menu.Choice == 1)
+                            BuyVehicle(ref carsForSale);
+                        else if (menu.Choice == 2)
+                            vehicleMgr.SellVehicle();
                         break;
                     #endregion
 
@@ -111,6 +126,11 @@ namespace V2_Laboration4
                     #endregion
                 }
             }
+        }
+
+        public void BuyVehicle(ref List<Vehicle> mCarsForSale)
+        {
+            
         }
 
 

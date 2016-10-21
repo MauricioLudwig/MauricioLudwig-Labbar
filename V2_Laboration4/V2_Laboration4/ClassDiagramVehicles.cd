@@ -3,22 +3,29 @@
   <Class Name="V2_Laboration4.Vehicle">
     <Position X="3" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAABQAAAAAAAAAAAAAAAAAAIAAAAAgAgAAAAAA=</HashCode>
+      <HashCode>AAgAAAAABQAAAAAAAAAAAAAAAAAAIAAAAIgAgAAACAA=</HashCode>
       <FileName>Vehicle Classes\Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration4.Car">
-    <Position X="1.75" Y="3.75" Width="1.75" />
+    <Position X="1.75" Y="4.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAA=</HashCode>
       <FileName>Vehicle Classes\Car.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration4.Motorcycle">
-    <Position X="4.25" Y="3.75" Width="1.75" />
+    <Position X="4.25" Y="4.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAA=</HashCode>
       <FileName>Vehicle Classes\Motorcycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="V2_Laboration4.ExternalVendor">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExternalVendor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
