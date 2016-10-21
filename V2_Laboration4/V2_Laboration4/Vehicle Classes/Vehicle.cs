@@ -12,17 +12,13 @@ namespace V2_Laboration4
         public string Manufacturer { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
-        public bool Used { get; set; }
-        public float Price { get; set; }
+        public int Price { get; set; }
 
-        public virtual string VehicleInfo()
+        public virtual string VehicleDescription()
         {
-            return "";
+            return String.Format("Manufacturer: {0,-15} Model: {1,-15} Year: {2,-10} Color: {3,-10} Price: {4}",
+                Manufacturer, Model, Year, Color, Price);
         }
 
-        public virtual float VehicleListing()
-        {
-            return 0F;
-        }
     }
 }

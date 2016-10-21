@@ -43,18 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExternalVendor.cs" />
+    <Compile Include="Menus.cs" />
     <Compile Include="Pedantry\TextColor.cs" />
     <Compile Include="Pedantry\ValidateInput.cs" />
-    <Compile Include="Vehicle\Car.cs" />
-    <Compile Include="Vehicle\Motorcycle.cs" />
+    <Compile Include="VehicleManager.cs" />
+    <Compile Include="Vehicle Classes\Car.cs" />
+    <Compile Include="Vehicle Classes\Motorcycle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime.cs" />
-    <Compile Include="Vehicle\Vehicle.cs" />
+    <Compile Include="Vehicle Classes\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Vehicle\ClassDiagramVehicles.cd" />
+    <None Include="ClassDiagramVehicles.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

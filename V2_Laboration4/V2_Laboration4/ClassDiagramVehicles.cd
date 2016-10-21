@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="V2_Laboration4.Vehicle">
+    <Position X="3" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAABQAAAAAAAAAAAAAAAAAAIAAAAAgAgAAAAAA=</HashCode>
+      <FileName>Vehicle Classes\Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="V2_Laboration4.Car">
+    <Position X="1.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle Classes\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="V2_Laboration4.Motorcycle">
+    <Position X="4.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vehicle Classes\Motorcycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -7,5 +7,10 @@ namespace V2_Laboration4
 {
     public class Motorcycle : Vehicle
     {
+
+        public override string VehicleDescription()
+        {
+            return base.VehicleDescription();
+        }
     }
 }

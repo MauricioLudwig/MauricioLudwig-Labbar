@@ -13,19 +13,18 @@ namespace V2_Laboration4
         public static int Integer()
         {
             bool validInput;
-            string input;
             int output;
+            string input;
 
             do
-            {
-                TextColor.Yellow("Input: ");                
+            {         
                 input = Console.ReadLine();
                 validInput = int.TryParse(input, out output);
 
                 if (validInput)
                     return output;
                 else
-                    TextColor.Red("Invalid integer, try again.");
+                    TextColor.Red("Invalid integer, try again." + Environment.NewLine);
 
             } while (true);
         }
@@ -35,41 +34,39 @@ namespace V2_Laboration4
         public static int Integer(int minNum)
         {
             bool validInput;
-            string input;
             int output;
+            string input;
 
             do
             {
-                TextColor.Yellow("Input: ");
                 input = Console.ReadLine();
                 validInput = int.TryParse(input, out output);
 
                 if (validInput && output >= minNum)
                     return output;
                 else
-                    TextColor.Red("Invalid integer, try again.");
+                    TextColor.Red("Invalid integer, try again." + Environment.NewLine);
 
             } while (true);
         }
         #endregion
 
-        #region Integer (minNum and maxNum)
+        #region Integer (minNum, maxNum)
         public static int Integer(int minNum, int maxNum)
         {
             bool validInput;
-            string input;
             int output;
+            string input;
 
             do
             {
-                TextColor.Yellow("Input: ");
                 input = Console.ReadLine();
                 validInput = int.TryParse(input, out output);
 
                 if (validInput && output >= minNum && output <= maxNum)
                     return output;
                 else
-                    TextColor.Red("Invalid integer, try again.");
+                    TextColor.Red("Invalid integer, try again." + Environment.NewLine);
 
             } while (true);
         }
