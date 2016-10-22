@@ -8,17 +8,13 @@ namespace V2_Laboration4
 {
     class Runtime
     {
+        ExternalVendor externalVendor = new ExternalVendor();
 
         public void Start()
         {
 
             VehicleManager vehicleMgr = new VehicleManager();
             Menus menu = new Menus();
-            ExternalVendor externalVendor = new ExternalVendor();
-
-            List<Vehicle> carsForSale = new List<Vehicle>();
-            carsForSale.AddRange(externalVendor.VendorsCars);
-            carsForSale.AddRange(externalVendor.VendorsMotorcycles);
 
             bool continueLoop = true;
             while (continueLoop)
@@ -102,11 +98,9 @@ namespace V2_Laboration4
                     #region 3. Buy/Sell
                     case 3:
                         Console.Clear();
-                        // FIX
-                        vehicleMgr.DisplayVehiclesOnSale();
                         menu.BuyOrSellMenu();
                         if (menu.Choice == 1)
-                            BuyVehicle(ref carsForSale);
+                            BuyVehicle();
                         else if (menu.Choice == 2)
                             vehicleMgr.SellVehicle();
                         break;
@@ -128,9 +122,23 @@ namespace V2_Laboration4
             }
         }
 
-        public void BuyVehicle(ref List<Vehicle> mCarsForSale)
+        public void BuyVehicle()
         {
-            
+
+            Console.Clear();
+            foreach (var carForSale in externalVendor.VendorsVehicles)
+            {
+                Console.Write(carForSale.VehicleDescription());
+                Console.WriteLine("\tCategory: {0}", carForSale.Category);
+            }
+
+            //do
+            //{
+            //    Console.WriteLine("Filter by: ");
+            //    Console.WriteLine("1. Manufacturer\t2. Model\t3.Color\t4. Car\t5. Motorcycle");
+            //} while (true);
+
+            Console.ReadKey();
         }
 
 

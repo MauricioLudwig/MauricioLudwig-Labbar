@@ -42,5 +42,10 @@ namespace V2_Laboration4
             Choice = ValidateInput.Integer(1, 3);
         }
 
+        public void BuyVehicle()
+        {
+
+        }
+
     }
 }

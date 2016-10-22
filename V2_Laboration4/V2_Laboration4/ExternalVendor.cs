@@ -11,6 +11,7 @@ namespace V2_Laboration4
 
         public List<Car> VendorsCars { get; set; }
         public List<Motorcycle> VendorsMotorcycles { get; set; }
+        public List<Vehicle> VendorsVehicles { get; set; }
 
         public ExternalVendor()
         {
@@ -31,6 +32,10 @@ namespace V2_Laboration4
                 new Motorcycle { Manufacturer = "SAAB",     Model = "KI0",  Year = 2000, Color = "Green",  Price = 20000, Type = "Cruiser",    Category = "Motorcycle" },
                 new Motorcycle { Manufacturer = "Volvo",    Model = "X11",  Year = 1990, Color = "Red",    Price = 35000, Type = "Scooter",    Category = "Motorcycle" },
             };
+
+            VendorsVehicles = new List<Vehicle>();
+            VendorsVehicles.AddRange(VendorsCars);
+            VendorsVehicles.AddRange(VendorsMotorcycles);
         }
 
     }
