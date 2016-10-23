@@ -293,7 +293,7 @@ namespace V2_Laboration4
                 {
                     Car sellCar = Cars
                         .Single(car => String.Equals(car.StockID(), input));
-                    Console.WriteLine("Is car new (y/n)? Any other key terminates the operation.");
+                    Console.WriteLine("Is the car new (y/n)? Any other key terminates the operation.");
                     string newQuery = Console.ReadLine();
                     if (newQuery.ToLower() == "y")
                     {
