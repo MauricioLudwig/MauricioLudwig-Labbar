@@ -177,7 +177,7 @@ namespace V2_Laboration4
         public void BuyNewVehicle()
         {
 
-            DisplayVendorsVehicles("new");
+            DisplayVendorsVehicles(true);
             Console.Write("Select vehicle by ID to purchase: ");
             string input = Console.ReadLine();
 
@@ -230,7 +230,7 @@ namespace V2_Laboration4
         #region Buy Old Vehicle
         public void BuyOldVehicle()
         {
-            DisplayVendorsVehicles("old");
+            DisplayVendorsVehicles(false);
             Console.Write("Select vehicle by ID to purchase: ");
             string input = Console.ReadLine();
 
@@ -280,13 +280,67 @@ namespace V2_Laboration4
         }
         #endregion
 
+        #region Sell Vehicle
         public void SellVehicle()
         {
-
             DisplayAllVehicles();
+            TextColor.Green("Select vehicle (ID) you wish to sell: ");
+            string input = Console.ReadLine();
 
+            try
+            {
+                if (input[0] == 'C')
+                {
+                    Car sellCar = Cars
+                        .Single(car => String.Equals(car.StockID(), input));
+                    Console.WriteLine("Is car new (y/n)? Any other key terminates the operation.");
+                    string newQuery = Console.ReadLine();
+                    if (newQuery.ToLower() == "y")
+                    {
+                        Console.WriteLine("Car {0} {1} ({2}) sold as new for {3} kr.",
+                            sellCar.Manufacturer, sellCar.Model, sellCar.StockID(), sellCar.Price);
 
+                        Cars.Remove(sellCar);
+                    }
+                    else if (newQuery.ToLower() == "n")
+                    {
+                        Console.WriteLine("Car {0} {1} ({2}) sold as used for {3} kr. Original price was {4} kr.",
+                            sellCar.Manufacturer, sellCar.Model, sellCar.StockID(), sellCar.AdjustedPrice(), sellCar.Price);
+
+                        Cars.Remove(sellCar);
+                    }
+                }
+                else if (input[0] == 'M')
+                {
+                    Motorcycle sellMotorcycle = Motorcycles
+                        .Single(motorcycle => String.Equals(motorcycle.StockID(), input));
+                    Console.WriteLine("Is the motorcycle new (y/n)? Any other key terminates the operation.");
+                    string newQuery = Console.ReadLine();
+                    if (newQuery.ToLower() == "y")
+                    {
+                        Console.WriteLine("Motorcycle {0} {1} ({2}) sold as new for {3} kr.",
+                            sellMotorcycle.Manufacturer, sellMotorcycle.Model, sellMotorcycle.StockID(), sellMotorcycle.Price);
+
+                        Motorcycles.Remove(sellMotorcycle);
+                    }
+                    else if (newQuery.ToLower() == "n")
+                    {
+                        Console.WriteLine("Motorcycle {0} {1} ({2}) sold as used for {3} kr. Original price was {4} kr.",
+                            sellMotorcycle.Manufacturer, sellMotorcycle.Model, sellMotorcycle.StockID(), sellMotorcycle.AdjustedPrice(), sellMotorcycle.Price);
+
+                        Motorcycles.Remove(sellMotorcycle);
+                    }
+                }
+                else
+                    Console.WriteLine("Invalid input. Try again.");
+            }
+            catch
+            {
+                Console.WriteLine("Invalid input. Try again..");
+            }
+            Console.ReadKey();
         }
+        #endregion
 
         #region View Inventory
         public void ViewInventory()
@@ -347,12 +401,12 @@ namespace V2_Laboration4
         #endregion
 
         #region Display Vendors Vehicles
-        public void DisplayVendorsVehicles(string text)
+        public void DisplayVendorsVehicles(bool newVehicle)
         {
             externalVendor.NewVehicles = new List<Vehicle>();
             externalVendor.OldVehicles = new List<Vehicle>();
 
-            if (text == "new")
+            if (newVehicle == true)
             {
                 externalVendor.NewVehicles.AddRange(externalVendor.NewCarsForSale);
                 externalVendor.NewVehicles.AddRange(externalVendor.NewMotorcyclesForSale);
