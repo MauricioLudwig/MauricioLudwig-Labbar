@@ -148,5 +148,5 @@ namespace V2_Laboration3
             person.LastName = lastName;
         }
 
-    } // Ending Bracket: Class
-} // Ending Bracket: Namespace
+    }
+}
