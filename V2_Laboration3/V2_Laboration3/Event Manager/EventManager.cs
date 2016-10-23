@@ -71,6 +71,7 @@ namespace V2_Laboration3
             Console.WriteLine("{0}. " + movie.EventDescription(), Index++);
             Console.WriteLine();
         }
+
         public void SearchEvent()
         {
             string input;
