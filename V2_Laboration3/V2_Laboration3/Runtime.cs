@@ -14,15 +14,16 @@ namespace V2_Laboration3
         public void Start()
         {
 
-            bool displayMainMenu = true;
+            SignIn();
 
+            bool displayMainMenu = true;
             while (displayMainMenu)
             {
 
                 // Main Menu
                 Console.Clear();
                 Menus.HeaderAndSubHeader
-                    ("Booking Manager", "Welcome! Make your selection below.");
+                    ("Booking Manager", "Welcome " + person.FullName() + "! Make your selection below.");
                 Menus.MainMenu();
                 int mainMenuChoice = ValidateInput.ValidateInteger(1, 6);
 
@@ -94,8 +95,9 @@ namespace V2_Laboration3
                         Menus.HeaderAndSubHeader("Booking Manager", "Scroll through your list of bookings.");
                         foreach (var booking in person.MyBookings)
                         {
-                            TextColor.Blue(booking.EventID + Environment.NewLine);
-                            Console.Write(booking.EventDescription());
+                            TextColor.Blue("Type: " + booking.EventID + Environment.NewLine);
+                            TextColor.White("Booked by: " + person.FullName() + Environment.NewLine);
+                            Console.Write(Environment.NewLine + booking.EventDescription());
                             Console.WriteLine(Environment.NewLine);
                         }
                         Console.ReadKey();
@@ -130,6 +132,20 @@ namespace V2_Laboration3
                 Console.ReadKey();
                 return false;
             }
+        }
+
+        public void SignIn()
+        {
+            Menus.HeaderAndSubHeader("TicBot 1.0", "Enter your credentials below to get started.");
+
+            Console.Write("First Name: ");
+            string firstName = Console.ReadLine();
+
+            Console.Write("Last Name: ");
+            string lastName = Console.ReadLine();
+
+            person.FirstName = firstName;
+            person.LastName = lastName;
         }
 
     } // Ending Bracket: Class

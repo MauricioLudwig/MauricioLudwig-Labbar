@@ -18,5 +18,10 @@ namespace V2_Laboration3
             MyBookings = new List<Event>();
         }
 
+        public string FullName()
+        {
+            return FirstName + " " + LastName;
+        }
+
     }
 }
