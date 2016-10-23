@@ -45,12 +45,12 @@
   <ItemGroup>
     <Compile Include="Event Manager\EventManager.cs" />
     <Compile Include="Menus.cs" />
-    <Compile Include="Events Classes\Movie.cs" />
+    <Compile Include="Event Classes\Movie.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Pedantry\TextColor.cs" />
-    <Compile Include="Events Classes\Theater.cs" />
-    <Compile Include="Events Classes\Concert.cs" />
-    <Compile Include="Events Classes\Event.cs" />
+    <Compile Include="Event Classes\Theater.cs" />
+    <Compile Include="Event Classes\Concert.cs" />
+    <Compile Include="Event Classes\Event.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime.cs" />
