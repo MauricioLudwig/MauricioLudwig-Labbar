@@ -27,5 +27,6 @@ namespace V2_Laboration3
         {
             return String.Format("{0:dd/MM/yyyy}", Date);
         }
+
     }
 }

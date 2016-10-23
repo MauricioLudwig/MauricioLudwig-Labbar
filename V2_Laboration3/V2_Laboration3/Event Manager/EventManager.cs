@@ -12,6 +12,7 @@ namespace V2_Laboration3
         public List<Concert> Concerts { get; set; } 
         public List<Theater> Theaters { get; set; }
         public List<Movie> Movies { get; set; }
+        public List<Event> AllAvailableEvents { get; set; }
         public int Index { get; set; }
 
         public EventManager()
@@ -46,6 +47,11 @@ namespace V2_Laboration3
                 new Movie() { Name = "Passengers",                   EventID = "Movie", Fee = 180, Date = new DateTime(2016, 12, 21), is3D = false, MetaScore = 77 }
             };
             #endregion
+
+            AllAvailableEvents = new List<Event>();
+            AllAvailableEvents.AddRange(Concerts);
+            AllAvailableEvents.AddRange(Theaters);
+            AllAvailableEvents.AddRange(Movies);
         }
 
         public void AvailableConcerts(Concert concert)
@@ -64,6 +70,63 @@ namespace V2_Laboration3
         {
             Console.WriteLine("{0}. " + movie.EventDescription(), Index++);
             Console.WriteLine();
+        }
+        public void SearchEvent()
+        {
+            string input;
+            bool stringInput;
+            int intInput;
+
+            do
+            {
+                Menus.HeaderAndSubHeader("Search by Name or Year", "Type \'exit\' to return to main menu");
+                TextColor.Yellow("Input: ");
+                input = Console.ReadLine();
+
+                stringInput = int.TryParse(input, out intInput);
+
+                if (stringInput)
+                {
+                    Event[] findEvent = AllAvailableEvents
+                        .Where(mEvent => mEvent.Date.Year.Equals(intInput))
+                        .ToArray();
+
+                    if (findEvent.Length < 1 && input.ToLower() != "exit")
+                        TextColor.Red("No match.");
+                    else
+                    {
+                        foreach (var mEvent in findEvent)
+                        {
+                            TextColor.Blue(Environment.NewLine + "Located in: " + mEvent.EventID + Environment.NewLine);
+                            Console.WriteLine(mEvent.EventDescription());
+                        }
+                    }
+
+                }
+                else
+                {
+                    Event[] findEvent = AllAvailableEvents
+                        .Where(mEvent => mEvent.Name.Contains(input))
+                        .ToArray();
+
+                    if (findEvent.Length < 1 && input.ToLower() != "exit")
+                        TextColor.Red("No match.");
+                    else
+                    {
+                        foreach (var mEvent in findEvent)
+                        {
+                            TextColor.Blue(Environment.NewLine + "Located in: " + mEvent.EventID + Environment.NewLine);
+                            Console.WriteLine(mEvent.EventDescription());
+                        }
+                    }
+                }
+
+                Console.WriteLine(Environment.NewLine + "------------------------");
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadKey();
+                Console.Clear();
+
+            } while (input.ToLower() != "exit");
         }
 
     }

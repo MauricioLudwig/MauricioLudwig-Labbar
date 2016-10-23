@@ -8,95 +8,99 @@ namespace V2_Laboration3
 {
     class Runtime
     {
+        EventManager eventManager = new EventManager();
+        Person person = new Person();
 
         public void Start()
         {
-
-            EventManager eventManager = new EventManager();
-            Person person = new Person();
 
             bool displayMainMenu = true;
 
             while (displayMainMenu)
             {
 
-                // First Menu
+                // Main Menu
                 Console.Clear();
                 Menus.HeaderAndSubHeader
                     ("Booking Manager", "Welcome! Make your selection below.");
                 Menus.MainMenu();
-
-                int mainMenuChoice = ValidateInput.ValidateInteger(1, 5);
+                int mainMenuChoice = ValidateInput.ValidateInteger(1, 6);
 
                 // Second Menu
                 Console.Clear();
                 Menus.HeaderAndSubHeader("Available Bookings", "Select, confirm, done!");
 
                 eventManager.Index = 1;
-                int reservationChoice;
+                int eventChoice;
 
                 switch (mainMenuChoice)
                 {
                     case 1:
-                        // Concert listings
+                        // Listing available concerts
                         eventManager.Concerts.ForEach(eventManager.AvailableConcerts);
                         Console.WriteLine("{0}. Return.", eventManager.Index);
                         
-                        // Specific concert choice
-                        reservationChoice = ValidateInput.ValidateInteger(1, eventManager.Index);
+                        // Ascertain desired concert event
+                        eventChoice = ValidateInput.ValidateInteger(1, eventManager.Index);
 
                         // Confirm or deny booking
-                        if (reservationChoice != eventManager.Index)
+                        if (eventChoice != eventManager.Index)
                         {
-                            --reservationChoice;
-                            if (ConfirmBooking(eventManager.Concerts[reservationChoice].Name))
-                                person.MyBookings.Add(eventManager.Concerts[reservationChoice]);                                
+                            --eventChoice;
+                            if (ConfirmBooking(eventManager.Concerts[eventChoice].Name))
+                                person.MyBookings.Add(eventManager.Concerts[eventChoice]);                                
                         }
                         break;
                     case 2:
-                        // Theater listings
+                        // Listing available theater plays
                         eventManager.Theaters.ForEach(eventManager.AvailableTheaters);
                         Console.WriteLine("{0}. Return.", eventManager.Index);
 
-                        // Specific theater choice
-                        reservationChoice = ValidateInput.ValidateInteger(1, eventManager.Index);
+                        // Ascertain desired theater play
+                        eventChoice = ValidateInput.ValidateInteger(1, eventManager.Index);
 
                         // Confirm or deny booking
-                        if (reservationChoice != eventManager.Index)
+                        if (eventChoice != eventManager.Index)
                         {
-                            --reservationChoice;
-                            if (ConfirmBooking(eventManager.Theaters[reservationChoice].Name))
-                                person.MyBookings.Add(eventManager.Theaters[reservationChoice]);
+                            --eventChoice;
+                            if (ConfirmBooking(eventManager.Theaters[eventChoice].Name))
+                                person.MyBookings.Add(eventManager.Theaters[eventChoice]);
                         }
                         break;
                     case 3:
-                        // Movie listings
+                        // Listing available movies
                         eventManager.Movies.ForEach(eventManager.AvailableMovies);
                         Console.WriteLine("{0}. Return.", eventManager.Index);
 
-                        // Specific movie choice
-                        reservationChoice = ValidateInput.ValidateInteger(1, eventManager.Index);
+                        // Ascertain desired movie
+                        eventChoice = ValidateInput.ValidateInteger(1, eventManager.Index);
 
                         // Confirm or deny booking
-                        if (reservationChoice != eventManager.Index)
+                        if (eventChoice != eventManager.Index)
                         {
-                            --reservationChoice;
-                            if (ConfirmBooking(eventManager.Movies[reservationChoice].Name))
-                                person.MyBookings.Add(eventManager.Movies[reservationChoice]);
+                            --eventChoice;
+                            if (ConfirmBooking(eventManager.Movies[eventChoice].Name))
+                                person.MyBookings.Add(eventManager.Movies[eventChoice]);
                         }
                         break;
                     case 4:
+                        // Search for Event
+                        Console.Clear();
+                        eventManager.SearchEvent();
+                        break;
+                    case 5:
                         // Show Bookings
                         Console.Clear();
                         Menus.HeaderAndSubHeader("Booking Manager", "Scroll through your list of bookings.");
                         foreach (var booking in person.MyBookings)
                         {
+                            TextColor.Blue(booking.EventID + Environment.NewLine);
                             Console.Write(booking.EventDescription());
                             Console.WriteLine(Environment.NewLine);
                         }
                         Console.ReadKey();
                         break;
-                    case 5:
+                    case 6:
                         // Exit Program
                         Console.Clear();
                         displayMainMenu = false;

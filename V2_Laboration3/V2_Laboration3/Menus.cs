@@ -24,11 +24,13 @@ namespace V2_Laboration3
         public static void MainMenu()
         {
             Console.WriteLine("1. Concert");
-            Console.WriteLine("2. Movie");
-            Console.WriteLine("3. Theater");
+            Console.WriteLine("2. Theater");
+            Console.WriteLine("3. Movie");
             Console.WriteLine();
-            Console.WriteLine("4. Show Bookings");
-            Console.WriteLine("5. Exit Program");
+            Console.WriteLine("4. Search for Event");
+            Console.WriteLine("5. Show Bookings");
+            Console.WriteLine("6. Exit Program");
         }
+
     }
 }

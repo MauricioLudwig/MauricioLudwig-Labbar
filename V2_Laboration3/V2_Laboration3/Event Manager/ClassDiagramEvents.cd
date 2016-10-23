@@ -4,28 +4,28 @@
     <Position X="3.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAgAAAAAAQgAAAAAAABAAAAAIAAAAA=</HashCode>
-      <FileName>Events\Event.cs</FileName>
+      <FileName>Events Classes\Event.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration3.Movie">
     <Position X="1.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAAAAAAIAAAAA=</HashCode>
-      <FileName>Events\Movie.cs</FileName>
+      <FileName>Events Classes\Movie.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration3.Concert">
     <Position X="3.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
-      <FileName>Events\Concert.cs</FileName>
+      <FileName>Events Classes\Concert.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration3.Theater">
     <Position X="6" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAIAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
-      <FileName>Events\Theater.cs</FileName>
+      <FileName>Events Classes\Theater.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

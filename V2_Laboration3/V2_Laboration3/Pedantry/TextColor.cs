@@ -36,5 +36,12 @@ namespace V2_Laboration3
             Console.Write(text);
             Console.ResetColor();
         }
+
+        public static void Blue(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write(text);
+            Console.ResetColor();
+        }
     }
 }
