@@ -9,10 +9,16 @@ namespace V2_Laboration4
     {
 
         public bool IsSedan { get; set; }
+        public int HorsePower { get; set; }
 
-        public override string VehicleDescription()
+        public override string VehicleInfo()
         {
-            return base.VehicleDescription();
+            return String.Format("{0}" + Environment.NewLine + "{1,-5}This car is {2} and sports {3} horsepowers.",
+                base.VehicleInfo(),
+                "",
+                IsSedan == true ? "a sedan" : "not a sedan",
+                HorsePower);
         }
+
     }
 }

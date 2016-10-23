@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="V2_Laboration4.Vehicle">
-    <Position X="3" Y="0.75" Width="1.75" />
+    <Position X="3" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAABQAAAAAAAAAAAAAAAAAAIAAAAIgAgAAACAA=</HashCode>
+      <HashCode>gAgAAAAAAQAAAAAAAAACAAAAAAAAAAAAAIgAgAAADAA=</HashCode>
       <FileName>Vehicle Classes\Vehicle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration4.Car">
-    <Position X="1.75" Y="4.25" Width="1.75" />
+    <Position X="1.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAgAAAAAABAA=</HashCode>
       <FileName>Vehicle Classes\Car.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration4.Motorcycle">
-    <Position X="4.25" Y="4.25" Width="1.75" />
+    <Position X="4" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAABAA=</HashCode>
       <FileName>Vehicle Classes\Motorcycle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="V2_Laboration4.ExternalVendor">
-    <Position X="7" Y="0.75" Width="1.5" />
+    <Position X="6.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ExternalVendor.cs</FileName>
     </TypeIdentifier>
   </Class>

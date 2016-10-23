@@ -8,23 +8,33 @@ namespace V2_Laboration4
     public abstract class Vehicle
     {
 
-        public string Color { get; set; }
         public string Manufacturer { get; set; }
         public string Model { get; set; }
-        public int Year { get; set; }
+        public string Color { get; set; }
+        public string StockCategory { get; set; }
+        public int StockIndex { get; set; }
         public int Price { get; set; }
-        public string Category { get; set; }
 
-        public virtual string VehicleDescription()
+        public virtual string VehicleInfo()
         {
-            return String.Format("{0,-15} {1,-15} {2,-10} {3,-10} {4}",
-                Manufacturer, Model, Year, Color, Price);
+            return String.Format("{0,-5}{1,-15} {2,-15} {3,-10} {4,-10}",
+                StockID(), Manufacturer, Model, Color, Price);
         }
 
-        public static void VehicleLabel()
+        public static string VehicleLabel()
         {
-            Console.WriteLine("{0,-15} {1,-15} {2,-10} {3,-10} {4}" + Environment.NewLine,
-                "Manufacturer", "Model", "Year", "Color", "Price");
+            return String.Format("{0,-5}{1,-15} {2,-15} {3,-10} {4,-10}",
+                "ID", "Manufacturer", "Model", "Color", "Price");
+        }
+
+        public string StockID()
+        {
+            return StockCategory + StockIndex.ToString();
+        }
+
+        public int AdjustedPrice()
+        {
+            return Price / 3 * 2;
         }
 
     }

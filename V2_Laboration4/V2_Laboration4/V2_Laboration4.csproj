@@ -44,10 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExternalVendor.cs" />
-    <Compile Include="Menus.cs" />
+    <Compile Include="Managers\MenuManager.cs" />
     <Compile Include="Pedantry\TextColor.cs" />
     <Compile Include="Pedantry\ValidateInput.cs" />
-    <Compile Include="VehicleManager.cs" />
+    <Compile Include="Managers\VehicleManager.cs" />
     <Compile Include="Vehicle Classes\Car.cs" />
     <Compile Include="Vehicle Classes\Motorcycle.cs" />
     <Compile Include="Program.cs" />

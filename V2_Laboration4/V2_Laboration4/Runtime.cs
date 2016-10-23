@@ -8,139 +8,73 @@ namespace V2_Laboration4
 {
     class Runtime
     {
-        ExternalVendor externalVendor = new ExternalVendor();
+        VehicleManager vehicleMgr = new VehicleManager();
+        MenuManager menuMgr = new MenuManager();
 
         public void Start()
         {
 
-            VehicleManager vehicleMgr = new VehicleManager();
-            Menus menu = new Menus();
+            bool continueMainMenu = true;
 
-            bool continueLoop = true;
-            while (continueLoop)
+            while (continueMainMenu)
             {
+                menuMgr.MainMenu();
 
-                Console.Clear();
-                // FIX
-                vehicleMgr.Overview();
-                menu.MainMenu();
-                switch (menu.Choice)
+                switch (menuMgr.menuOption)
                 {
-
-                    #region 1. Car
+                    #region Add Vehicle
                     case 1:
-                        Console.Clear();
-                        menu.VehicleMenu();
-                        switch (menu.Choice)
+                        do
                         {
-                            case 1:
-                                // 1.1 Add
-                                Console.Clear();
+                            menuMgr.AddVehicleMenu();
+                            if (menuMgr.menuOption == 1)
                                 vehicleMgr.AddCar();
-                                break;
-                            case 2:
-                                // 1.2 Remove
-                                Console.Clear();
-                                vehicleMgr.RemoveCar();
-                                Console.ReadKey(true);
-                                break;
-                            case 3:
-                                // 1.3 Show Inventory
-                                Console.Clear();
-                                vehicleMgr.ShowCars();
-                                Console.ReadKey(true);
-                                break;
-                            case 4:
-                                // 1.4 Return
-                                break;
-                            default:
-                                Console.WriteLine("Something went wrong.");
-                                Console.ReadKey();
-                                break;
-                        }
-                        break;
-                    #endregion
-
-                    #region 2. Motorcycle
-                    case 2:
-                        Console.Clear();
-                        menu.VehicleMenu();
-                        switch (menu.Choice)
-                        {
-                            case 1:  
-                                // 2.1 Add
-                                Console.Clear();
+                            else if (menuMgr.menuOption == 2)
                                 vehicleMgr.AddMotorcycle();
-                                break;
-                            case 2:
-                                // 2.2 Remove
-                                Console.Clear();
-                                vehicleMgr.RemoveMotorcycle();
-                                Console.ReadKey(true);
-                                break;
-                            case 3:
-                                // 2.3 Show Inventory
-                                Console.Clear();
-                                vehicleMgr.ShowMotorcycles();
-                                Console.ReadKey(true);
-                                break;
-                            case 4:
-                                // 2.4 Return
-                                break;
-                            default:
-                                Console.WriteLine("Something went wrong.");
-                                Console.ReadKey();
-                                break;
-                        }
+                        } while (menuMgr.menuOption != 3);
+                        break;
+                    #endregion
+                    
+                    #region Remove Vehicle
+                    case 2:
+                        vehicleMgr.RemoveVehicle();
                         break;
                     #endregion
 
-                    #region 3. Buy/Sell
+                    #region Buy Vehicle
                     case 3:
-                        Console.Clear();
-                        menu.BuyOrSellMenu();
-                        if (menu.Choice == 1)
-                            BuyVehicle();
-                        else if (menu.Choice == 2)
-                            vehicleMgr.SellVehicle();
+                        do
+                        {
+                            menuMgr.BuyVehicleMenu();
+                            if (menuMgr.menuOption == 1)
+                                vehicleMgr.BuyNewVehicle();
+                            else if (menuMgr.menuOption == 2)
+                                vehicleMgr.BuyOldVehicle();
+                        } while (menuMgr.menuOption != 3);
                         break;
                     #endregion
 
-                    #region 4. Exit Program
+                    #region Sell Vehicle
                     case 4:
-                        continueLoop = false;
+                        vehicleMgr.SellVehicle();
                         break;
                     #endregion
 
-                    #region Default
-                    default:
-                        Console.WriteLine("Something went wrong.");
-                        Console.ReadKey();
+                    #region View Inventory
+                    case 5:
+                        vehicleMgr.ViewInventory();
                         break;
                     #endregion
+
+                    case 6:
+                        continueMainMenu = false;
+                        break;
+
+                    default:
+                        break;
                 }
             }
         }
 
-        public void BuyVehicle()
-        {
-
-            Console.Clear();
-            foreach (var carForSale in externalVendor.VendorsVehicles)
-            {
-                Console.Write(carForSale.VehicleDescription());
-                Console.WriteLine("\tCategory: {0}", carForSale.Category);
-            }
-
-            //do
-            //{
-            //    Console.WriteLine("Filter by: ");
-            //    Console.WriteLine("1. Manufacturer\t2. Model\t3.Color\t4. Car\t5. Motorcycle");
-            //} while (true);
-
-            Console.ReadKey();
-        }
-
-
-    } // Class
-} // Namespace
+    }
+}

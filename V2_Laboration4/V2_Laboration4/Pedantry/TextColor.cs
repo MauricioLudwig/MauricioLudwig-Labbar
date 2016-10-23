@@ -23,5 +23,12 @@ namespace V2_Laboration4
             Console.ResetColor();
         }
 
+        public static void Green(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(text);
+            Console.ResetColor();
+        }
+
     }
 }

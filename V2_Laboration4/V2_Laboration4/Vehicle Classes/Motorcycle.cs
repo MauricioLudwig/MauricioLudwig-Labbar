@@ -9,10 +9,16 @@ namespace V2_Laboration4
     {
 
         public string Type { get; set; }
+        public int Year { get; set; }
 
-        public override string VehicleDescription()
+        public override string VehicleInfo()
         {
-            return base.VehicleDescription();
+            return String.Format("{0}" + Environment.NewLine + "{1,-5}This {2} motorcycle is a {3}.",
+                base.VehicleInfo(),
+                "",
+                Year, 
+                Type);
         }
+
     }
 }
