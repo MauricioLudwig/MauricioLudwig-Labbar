@@ -22,23 +22,8 @@ namespace V3_Laboration5.Models
             Blues
         }
 
-        private int length;
-
-        public int Length
-        {
-            get { return length; }
-            set
-            {
-                if (length < 0)
-                    length = 0;
-                length = value;
-            }
-        }
-
-        public string UniqueID { get; set; }
-
-        public string Creator { get; set; }
-
+        public int Length { get; set; }
+        public string Creator { get; set;}
         public string Title { get; set; }
 
         public static string PrintHeader()

@@ -48,6 +48,5 @@ namespace V3_Laboration5.Esthetics
 
             Console.WriteLine();
         }
-
     }
 }

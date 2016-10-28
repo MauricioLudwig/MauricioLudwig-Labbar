@@ -23,6 +23,7 @@ namespace V3_Laboration5.DataStores.Repositories
         public int PrintList()
         {
             int i = 0;
+
             TextAndColor.Header("i" + Book.PrintHeader());
             foreach (var book in MediaLists.Books)
             {

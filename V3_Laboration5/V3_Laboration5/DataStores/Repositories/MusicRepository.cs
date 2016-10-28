@@ -24,6 +24,7 @@ namespace V3_Laboration5.DataStores.Repositories
         public int PrintList()
         {
             int i = 0;
+
             TextAndColor.Header("i" + Music.PrintHeader());
             foreach (var music in MediaLists.Music)
             {

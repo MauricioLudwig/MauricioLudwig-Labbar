@@ -21,23 +21,8 @@ namespace V3_Laboration5.Models
             Fantasy
         }
 
-        private int pages;
-
-        public int Pages
-        {
-            get { return pages; }
-            set
-            {
-                if (pages < 1)
-                    pages = 0;
-                pages = value;                
-            }
-        }
-
-        public string UniqueID { get; set; }
-
+        public int Pages { get; set; }
         public string Creator { get; set; }
-
         public string Title { get; set; }
 
         public static string PrintHeader()
@@ -51,6 +36,5 @@ namespace V3_Laboration5.Models
             return String.Format("{0, 20} {1, 20} {2, 20} {3, 20}",
                 Creator, Title, Pages, Genre);
         }
-
     }
 }

@@ -31,8 +31,8 @@ namespace V3_Laboration5
                             option = UI.SubMenu("Add");
                             if (option == 1) // Add Book
                                 books.AddBook();
-                            else if (option == 2)
-                                music.AddSong(); // Add Music (Song)
+                            else if (option == 2) // Add Music (Song)
+                                music.AddSong();
                         } while (option != 3);
                         break;
 
@@ -40,10 +40,10 @@ namespace V3_Laboration5
                         do
                         {
                             option = UI.SubMenu("Remove");
-                            if (option == 1)
-                                books.RemoveBook(); // Remove Book
-                            else if (option == 2)
-                                music.RemoveSong(); // Remove Music (Song)
+                            if (option == 1) // Remove Book
+                                books.RemoveBook();
+                            else if (option == 2) // Remove Music (Song)
+                                music.RemoveSong();
                         } while (option != 3);
                         break;
 
@@ -51,10 +51,10 @@ namespace V3_Laboration5
                         do
                         {
                             option = UI.SubMenu("Edit");
-                            if (option == 1)
-                                books.EditBook(); // Edit Book
-                            else if (option == 2)
-                                music.EditSong(); // Edit Music (Song)
+                            if (option == 1) // Edit Book
+                                books.EditBook();
+                            else if (option == 2) // Edit Music (Song)
+                                music.EditSong();
                         } while (option != 3);
                         break;
 

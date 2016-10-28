@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using V3_Laboration5.DataStores.Repositories;
 using V3_Laboration5.DataStores;
+using V3_Laboration5.Models;
 using V3_Laboration5.ErrorHandling;
 using V3_Laboration5.Esthetics;
 
@@ -18,9 +19,8 @@ namespace V3_Laboration5.Controllers
         public void AddSong()
         {
             var newSong = UI.AddSong();
-            newSong.UniqueID = String.Format("M{0}", (MediaLists.Music.Count + 1).ToString());
             musicRepository.AddMedia(newSong);
-            UI.ChangesValidation("Song " + newSong.UniqueID + " added.");
+            UI.ConfirmChangesText("Song " + newSong.Title + " added.");
         }
 
         public void RemoveSong()
@@ -34,7 +34,7 @@ namespace V3_Laboration5.Controllers
             {
                 int max = musicRepository.PrintList();
                 musicRepository.RemoveMedia(MediaLists.Music[ValidateInput.Integer(1, max, "Nr: ") - 1]);
-                UI.ChangesValidation("Song removed.");
+                UI.ConfirmChangesText("Song removed.");
             }
         }
 
@@ -70,16 +70,20 @@ namespace V3_Laboration5.Controllers
                             break;
                         case 2:
                             TextAndColor.White("Song" + Environment.NewLine);
-                            Console.WriteLine("Old value: {0}" + Environment.NewLine, song.Title);
+                            Console.Write("Old value: {0}" + Environment.NewLine, song.Title);
                             TextAndColor.Green("New value: ");
                             song.Title = Console.ReadLine();
                             break;
                         case 3:
                             TextAndColor.White("Length" + Environment.NewLine);
-                            Console.WriteLine("Old value: {0}" + Environment.NewLine, song.Length);
-                            song.Length = ValidateInput.Integer("Length: ");
+                            Console.Write("Old value: {0}" + Environment.NewLine, song.Length);
+                            song.Length = ValidateInput.Integer("New value: ");
                             break;
                         case 4:
+                            TextAndColor.White("Genre" + Environment.NewLine);
+                            Console.WriteLine("Old value: {0}" + Environment.NewLine, song.Genre);
+                            UI.DisplaySongGenres();
+                            song.Genre = (Music.GenreType)ValidateInput.Integer(1, Enum.GetNames(typeof(Music.GenreType)).Length, "New value: ");
                             break;
                         case 5:
                             break;
@@ -88,7 +92,5 @@ namespace V3_Laboration5.Controllers
                 } while (option != 5);
             }
         }
-
-
     }
 }

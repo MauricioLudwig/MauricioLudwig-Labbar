@@ -8,7 +8,6 @@ namespace V3_Laboration5.DataStores.Repositories
 {
     interface IMediaProperties
     {
-        string UniqueID { get; set; }
         string Creator { get; set; }
         string Title { get; set; }
         string PrintAttributes();

@@ -19,9 +19,8 @@ namespace V3_Laboration5.Controllers
         public void AddBook()
         {
             var newBook = UI.AddBook();
-            newBook.UniqueID = String.Format("B{0}", (MediaLists.Books.Count + 1).ToString());
             bookRepository.AddMedia(newBook);
-            UI.ChangesValidation("Book " + newBook.UniqueID + " added.");
+            UI.ConfirmChangesText("Book " + newBook.Title + " added.");
         }
 
         public void RemoveBook()
@@ -36,7 +35,7 @@ namespace V3_Laboration5.Controllers
                 int max = bookRepository.PrintList();
                 TextAndColor.Header("Select book to remove");
                 bookRepository.RemoveMedia(MediaLists.Books[ValidateInput.Integer(1, max, "Nr: ") - 1]);
-                UI.ChangesValidation("Book removed.");
+                UI.ConfirmChangesText("Book removed.");
             }
         }
 
@@ -80,9 +79,13 @@ namespace V3_Laboration5.Controllers
                         case 3:
                             TextAndColor.White("Pages" + Environment.NewLine);
                             Console.Write("Old value: {0}" + Environment.NewLine, book.Pages);
-                            book.Pages = ValidateInput.Integer("Pages: ");
+                            book.Pages = ValidateInput.Integer("New value: ");
                             break;
                         case 4:
+                            TextAndColor.White("Genre" + Environment.NewLine);
+                            Console.WriteLine("Old value: {0}" + Environment.NewLine, book.Genre);
+                            UI.DisplayBookGenres();
+                            book.Genre = (Book.GenreType)ValidateInput.Integer(1, Enum.GetNames(typeof(Book.GenreType)).Length, "New value: ");
                             break;
                         case 5:
                             break;
@@ -90,8 +93,6 @@ namespace V3_Laboration5.Controllers
 
                 } while (option != 5);
             }
-
         }
-
     }
 }

@@ -58,14 +58,21 @@ namespace V3_Laboration5
 
             // Genre
             TextAndColor.Header("Select genre");
+            DisplaySongGenres();
+            newSong.Genre = (Music.GenreType)ValidateInput.Integer(1, Enum.GetNames(typeof(Music.GenreType)).Length, "Choice: ");
+
+            return newSong;
+        }
+        #endregion
+
+        #region Display Song Genres
+        public static void DisplaySongGenres()
+        {
             foreach (var genre in Enum.GetValues(typeof(Music.GenreType)))
             {
                 Console.WriteLine("{0} - {1}", (int)genre, genre);
             }
             Console.WriteLine();
-            newSong.Genre = (Music.GenreType)ValidateInput.Integer(1, Enum.GetNames(typeof(Book.GenreType)).Length, "Choice: ");
-
-            return newSong;
         }
         #endregion
 
@@ -88,18 +95,25 @@ namespace V3_Laboration5
 
             // Genre
             TextAndColor.Header("Select genre");
-            foreach (var genre in Enum.GetValues(typeof(Book.GenreType)))
-            {
-                Console.WriteLine("{0} - {1}", (int)genre, genre);
-            }
-            Console.WriteLine();
-            newBook.Genre = (Book.GenreType)ValidateInput.Integer(1, Enum.GetNames(typeof(Music.GenreType)).Length, "Choice: ");
+            DisplayBookGenres();
+            newBook.Genre = (Book.GenreType)ValidateInput.Integer(1, Enum.GetNames(typeof(Book.GenreType)).Length, "Choice: ");
 
             return newBook;
         }
         #endregion
 
-        #region Edit Book
+        #region Display Book Genres
+        public static void DisplayBookGenres()
+        {
+            foreach (var genre in Enum.GetValues(typeof(Book.GenreType)))
+            {
+                Console.WriteLine("{0} - {1}", (int)genre, genre);
+            }
+            Console.WriteLine();
+        }
+        #endregion
+
+        #region Edit Book Options
         public static string EditBookOptions()
         {
             return String.Format("{0} {1, 20} {2, 20} {3, 20} {4, 20}",
@@ -111,7 +125,7 @@ namespace V3_Laboration5
         }
         #endregion
 
-        #region Edit Song
+        #region Edit Song Options
         public static string EditSongOptions()
         {
             return String.Format("{0} {1, 20} {2, 20} {3, 20} {4, 20}",
@@ -123,11 +137,13 @@ namespace V3_Laboration5
         }
         #endregion
 
-        public static void ChangesValidation(string text)
+        #region Confirm Changes Text
+        public static void ConfirmChangesText(string text)
         {
             TextAndColor.Green(Environment.NewLine + text);
             Console.WriteLine(Environment.NewLine + "Press enter to continue.");
             Console.ReadKey();
         }
+        #endregion
     }
 }
