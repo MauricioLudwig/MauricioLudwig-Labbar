@@ -43,12 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\MusicController.cs" />
+    <Compile Include="DataStores\MediaLists.cs" />
+    <Compile Include="DataStores\Repositories\BookRepository.cs" />
+    <Compile Include="DataStores\Repositories\IMediaProperties.cs" />
+    <Compile Include="DataStores\Repositories\MusicRepository.cs" />
+    <Compile Include="ErrorHandling\ValidateInput.cs" />
+    <Compile Include="Esthetics\TextAndColor.cs" />
+    <Compile Include="DataStores\Repositories\IRepository.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Music.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
