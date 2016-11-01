@@ -8,7 +8,8 @@ namespace V3_Laboration6
 {
     class Program
     {
-        // Game Title Here
+
+        // Murder of a King
         static void Main(string[] args)
         {
             Game game = new Game();
