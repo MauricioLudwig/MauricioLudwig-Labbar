@@ -65,7 +65,7 @@ namespace V3_Laboration6.GameEngine
                 TextColor.Header("Interact With...");
                 option = UIScene.PrintCharacters(GameScene.Characters.Count);
 
-                if (option != GameScene.Items.Count)
+                if (option != GameScene.Characters.Count)
                 {
 
                     bool secondaryLoop = true;
