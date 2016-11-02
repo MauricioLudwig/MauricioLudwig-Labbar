@@ -22,7 +22,7 @@ namespace V4_Laboration7.StoreManager
             Console.Clear();
 
             if (shoppingCart.Count < 1)
-                Console.WriteLine("No products!");
+                Console.WriteLine("You currently have no products in your shopping cart!");
             else
             {
                 int totalSum = 0;
@@ -39,7 +39,7 @@ namespace V4_Laboration7.StoreManager
                     totalSum += product.Price;
                 }
 
-                Console.WriteLine("Total sum: {0} USD", totalSum);
+                Console.WriteLine("Total sum = {0} USD", totalSum);
             }
 
             Console.ReadKey();

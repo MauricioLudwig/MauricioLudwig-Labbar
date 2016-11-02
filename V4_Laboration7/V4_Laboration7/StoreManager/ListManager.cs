@@ -26,7 +26,7 @@ namespace V4_Laboration7.StoreManager
                     Price = 1500,
                     Longevity = 10,
                     IsNew = true,
-                    ProductInformation = "This is a heart.",
+                    ProductInformation = "A very healthy heart.",
                 },
 
                 new ArtificialOrgan()
@@ -35,7 +35,7 @@ namespace V4_Laboration7.StoreManager
                     Price = 750,
                     Longevity = 15,
                     IsNew = true,
-                    ProductInformation = "This is a kidney.",
+                    ProductInformation = "This kidney will last awhile.",
                 },
 
                 new ArtificialOrgan()
@@ -44,7 +44,7 @@ namespace V4_Laboration7.StoreManager
                     Price = 1250,
                     Longevity = 12,
                     IsNew = false,
-                    ProductInformation = "This is a liver."
+                    ProductInformation = "A liver for all."
                 },
 
             };
@@ -59,7 +59,7 @@ namespace V4_Laboration7.StoreManager
                     ProductName = "Hover Car",
                     Price = 5000,
                     IsNew = true,
-                    ProductInformation = "This is a Hover Car",
+                    ProductInformation = "Manufactured in Japan.",
                     Weight = 2000,
                 },
 
@@ -68,7 +68,7 @@ namespace V4_Laboration7.StoreManager
                     ProductName = "Jet Pack",
                     Price = 650,
                     IsNew = false,
-                    ProductInformation = "This is a Jet Pack",
+                    ProductInformation = "This Jet Pack is green.",
                     Weight = 20,
                 },
 
@@ -94,7 +94,7 @@ namespace V4_Laboration7.StoreManager
                     Price = 60,
                     DataTransferTime = 30,
                     IsNew = true,
-                    ProductInformation = "This is a Piano Skill",
+                    ProductInformation = "Play Mozart in 30 minutes",
                 },
 
                 new UploadKnowledge()
@@ -103,7 +103,7 @@ namespace V4_Laboration7.StoreManager
                     Price = 20,
                     DataTransferTime = 60,
                     IsNew = true,
-                    ProductInformation = "This is a Math Skill",
+                    ProductInformation = "Acquire advanced math skills.",
                 },
 
                 new UploadKnowledge()
@@ -112,7 +112,7 @@ namespace V4_Laboration7.StoreManager
                     Price = 30,
                     DataTransferTime = 120,
                     IsNew = false,
-                    ProductInformation = "This is a Mandarin Skill",
+                    ProductInformation = "Learn Mandarin in no time.",
                 },
 
             };

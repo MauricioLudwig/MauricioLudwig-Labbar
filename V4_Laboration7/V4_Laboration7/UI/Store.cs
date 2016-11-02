@@ -21,22 +21,22 @@ namespace V4_Laboration7.UI
             Console.WriteLine("5. View Shopping Cart");
             Console.WriteLine("6. Exit Program");
 
-            return ValidateInput.Integer("Category: ");
+            return ValidateInput.Integer(Environment.NewLine + "Option: ");
         }
 
-        public static void GetCommonProductProp(out string name, out string info, out int price, out bool inStock)
+        public static void GetCommonProductProp(out string name, out string info, out int price, out bool isNew)
         {
 
-            Console.WriteLine("Product Name:");
+            Console.Write("Product Name: ");
             name = Console.ReadLine();
 
-            Console.WriteLine("Product Information:");
+            Console.Write("Product Information: ");
             info = Console.ReadLine();
 
-            price = ValidateInput.Integer("Price:");
+            price = ValidateInput.Integer("Price: ");
 
-            Console.WriteLine("Is the product new (y/n)?");
-            inStock = Console.ReadLine().ToLower() == "y" ? true : false;
+            Console.Write("Is the product new (y/n)? ");
+            isNew = Console.ReadLine().ToLower() == "y" ? true : false;
         }
 
         public static int GetProductType()
@@ -47,22 +47,23 @@ namespace V4_Laboration7.UI
             Console.WriteLine("2. an Electronics item");
             Console.WriteLine("3. an Upload Knowledge Package");
 
-            return ValidateInput.Integer("Product: ");
+            return ValidateInput.Integer(Environment.NewLine + "Product: ");
         }
 
         public static void ProductAddedValidation(string text)
         {
-            Console.WriteLine("New product {0} added! Press enter to continue...", text);
+            Console.WriteLine(Environment.NewLine + "New product {0} added! Press enter to continue...", text);
             Console.ReadKey();
         }
 
         public static int PrintProductOptions(Product product)
         {
 
-            Console.WriteLine("Selected Product: {0}", product.ProductParameterValues());
-            Console.WriteLine(Environment.NewLine + "1. Add to Shopping Cart\t2. Remove from Registry");
+            Console.WriteLine("Selected Product | {0}", product.ProductParameterValues());
+            Console.WriteLine(Environment.NewLine + "1. Add to Shopping Cart");
+            Console.WriteLine("2. Remove from Inventory");
 
-            return ValidateInput.Integer("Option: ");
+            return ValidateInput.Integer(Environment.NewLine + "Option: ");
         }
 
     }

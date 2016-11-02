@@ -18,6 +18,7 @@ namespace V4_Laboration7.StoreManager
             int index = 1;
             int selectedProduct;
             Console.WriteLine("{0,-20}{1}", "Index", Category.FirstOrDefault().ProductParameterLabels());
+            Console.WriteLine();
 
             foreach (var product in Category)
             {
@@ -53,11 +54,11 @@ namespace V4_Laboration7.StoreManager
             string name;
             string info;
             int price;
-            bool inStock;
-
-            UI.Store.GetCommonProductProp(out name, out info, out price, out inStock);
+            bool isNew;
 
             int product = UI.Store.GetProductType();
+            Console.WriteLine();
+            UI.Store.GetCommonProductProp(out name, out info, out price, out isNew);
 
             switch (product)
             {
@@ -69,7 +70,7 @@ namespace V4_Laboration7.StoreManager
                     newArtificialOrgan.ProductName = name;
                     newArtificialOrgan.ProductInformation = info;
                     newArtificialOrgan.Price = price;
-                    newArtificialOrgan.IsNew = inStock;
+                    newArtificialOrgan.IsNew = isNew;
                     newArtificialOrgan.Longevity = ErrorHandling.ValidateInput.Integer("Longevity: ");
 
                     ListManager.ArtificialOrganCtg.Add(newArtificialOrgan);
@@ -84,7 +85,7 @@ namespace V4_Laboration7.StoreManager
                     newElectronics.ProductName = name;
                     newElectronics.ProductInformation = info;
                     newElectronics.Price = price;
-                    newElectronics.IsNew = inStock;
+                    newElectronics.IsNew = isNew;
                     newElectronics.Weight = ErrorHandling.ValidateInput.Integer("Weight: ");
 
                     ListManager.ElectronicsCtg.Add(newElectronics);
@@ -99,7 +100,7 @@ namespace V4_Laboration7.StoreManager
                     newUploadKnowledge.ProductName = name;
                     newUploadKnowledge.ProductInformation = info;
                     newUploadKnowledge.Price = price;
-                    newUploadKnowledge.IsNew = inStock;
+                    newUploadKnowledge.IsNew = isNew;
                     newUploadKnowledge.DataTransferTime = ErrorHandling.ValidateInput.Integer("Data Transfer Time: ");
 
                     ListManager.UploadKnowledgeCtg.Add(newUploadKnowledge);
