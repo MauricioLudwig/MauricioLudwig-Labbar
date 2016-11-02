@@ -25,18 +25,17 @@ namespace V4_Laboration7
                 switch (category)
                 {
                     case 1:
-                        storeController.SetCategory(1);
-                        storeController.PrintProducts();
-                        break;
                     case 2:
-                        storeController.SetCategory(2);
-                        storeController.PrintProducts();
-                        break;
                     case 3:
-                        storeController.SetCategory(3);
-                        storeController.PrintProducts();
+                        storeController.PrintProducts(category);
                         break;
                     case 4:
+                        storeController.AddProduct();
+                        break;
+                    case 5:
+                        Customer.PrintShoppingCart();
+                        break;
+                    case 6:
                         loop = false;
                         break;
                 }

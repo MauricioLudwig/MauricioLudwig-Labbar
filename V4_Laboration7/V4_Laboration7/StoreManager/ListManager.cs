@@ -11,6 +11,7 @@ namespace V4_Laboration7.StoreManager
         public static List<Product> ArtificialOrganCtg { get; set; }
         public static List<Product> ElectronicsCtg { get; set; }
         public static List<Product> UploadKnowledgeCtg { get; set; }
+        public static List<Product> AllProducts { get; set; }
 
         static ListManager()
         {
@@ -24,7 +25,7 @@ namespace V4_Laboration7.StoreManager
                     ProductName = "Heart",
                     Price = 1500,
                     Longevity = 10,
-                    InStock = true,
+                    IsNew = true,
                     ProductInformation = "This is a heart.",
                 },
 
@@ -33,7 +34,7 @@ namespace V4_Laboration7.StoreManager
                     ProductName = "Kidney",
                     Price = 750,
                     Longevity = 15,
-                    InStock = true,
+                    IsNew = true,
                     ProductInformation = "This is a kidney.",
                 },
 
@@ -42,7 +43,7 @@ namespace V4_Laboration7.StoreManager
                     ProductName = "Liver",
                     Price = 1250,
                     Longevity = 12,
-                    InStock = false,
+                    IsNew = false,
                     ProductInformation = "This is a liver."
                 },
 
@@ -57,7 +58,7 @@ namespace V4_Laboration7.StoreManager
                 {
                     ProductName = "Hover Car",
                     Price = 5000,
-                    InStock = true,
+                    IsNew = true,
                     ProductInformation = "This is a Hover Car",
                     Weight = 2000,
                 },
@@ -66,7 +67,7 @@ namespace V4_Laboration7.StoreManager
                 {
                     ProductName = "Jet Pack",
                     Price = 650,
-                    InStock = false,
+                    IsNew = false,
                     ProductInformation = "This is a Jet Pack",
                     Weight = 20,
                 },
@@ -75,7 +76,7 @@ namespace V4_Laboration7.StoreManager
                 {
                     ProductName = "Hologram Projector",
                     Price = 120,
-                    InStock = true,
+                    IsNew = true,
                     ProductInformation = "This is a Hologram Projector",
                     Weight = 5,
                 },
@@ -92,7 +93,7 @@ namespace V4_Laboration7.StoreManager
                     ProductName = "Piano Skill",
                     Price = 60,
                     DataTransferTime = 30,
-                    InStock = true,
+                    IsNew = true,
                     ProductInformation = "This is a Piano Skill",
                 },
 
@@ -101,7 +102,7 @@ namespace V4_Laboration7.StoreManager
                     ProductName = "Math Skill",
                     Price = 20,
                     DataTransferTime = 60,
-                    InStock = true,
+                    IsNew = true,
                     ProductInformation = "This is a Math Skill",
                 },
 
@@ -110,12 +111,14 @@ namespace V4_Laboration7.StoreManager
                     ProductName = "Mandarin Skill",
                     Price = 30,
                     DataTransferTime = 120,
-                    InStock = false,
+                    IsNew = false,
                     ProductInformation = "This is a Mandarin Skill",
                 },
 
             };
             #endregion
+
+            AllProducts = new List<Product>();
 
         }
 
@@ -133,6 +136,15 @@ namespace V4_Laboration7.StoreManager
             }
 
             return null;
+        }
+
+        public static void SetAllProducts()
+        {
+            AllProducts.Clear();
+
+            AllProducts.AddRange(ArtificialOrganCtg);
+            AllProducts.AddRange(ElectronicsCtg);
+            AllProducts.AddRange(UploadKnowledgeCtg);
         }
     }
 }

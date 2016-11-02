@@ -10,6 +10,6 @@ namespace V4_Laboration7
         int Price { get; set; }
         string ProductInformation { get; set; }
         string ProductName { get; set; }
-        bool InStock { get; set; }
+        bool IsNew { get; set; }
     }
 }
