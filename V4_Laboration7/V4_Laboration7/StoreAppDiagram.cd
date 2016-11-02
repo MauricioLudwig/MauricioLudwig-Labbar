@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="V4_Laboration7.Product">
+    <Position X="3.75" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAgAAAQAAAAAAAAAAAAAAAAAAAAACACAAAAAIAAA=</HashCode>
+      <FileName>Store\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="V4_Laboration7.UploadKnowledge">
+    <Position X="1" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAQAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Store\Categories\UploadKnowledge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="V4_Laboration7.ArtificialOrgan">
+    <Position X="3.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAEAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Store\Categories\ArtificialOrgan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="V4_Laboration7.Electronics">
+    <Position X="6.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAACAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Store\Categories\Electronics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="V4_Laboration7.ISellable" Collapsed="true">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAA=</HashCode>
+      <FileName>Store\ISellable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

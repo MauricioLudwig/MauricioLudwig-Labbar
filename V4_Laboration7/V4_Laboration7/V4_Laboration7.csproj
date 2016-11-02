@@ -43,11 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StoreManager\ListManager.cs" />
+    <Compile Include="StoreManager\StoreController.cs" />
+    <Compile Include="Store\Categories\ArtificialOrgan.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Store\Categories\Electronics.cs" />
+    <Compile Include="ErrorHandling\ValidateInput.cs" />
+    <Compile Include="Store\ISellable.cs" />
+    <Compile Include="Store\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Esthetics.cs" />
+    <Compile Include="Store\Categories\UploadKnowledge.cs" />
+    <Compile Include="UI\Store.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="StoreAppDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
