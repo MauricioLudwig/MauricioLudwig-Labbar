@@ -28,9 +28,14 @@ namespace V4_Laboration7.StoreManager
                 int totalSum = 0;
                 Console.WriteLine("Your Products" + Environment.NewLine);
 
+                Console.WriteLine("{0,-20}{1,-20}{2,-20}" + Environment.NewLine,
+                    "Product", "Price", "New");
+
                 foreach (var product in shoppingCart)
                 {
-                    Console.WriteLine(product.ProductParameterValues());
+                    Console.Write(product.ProductParameterValues());
+                    Console.WriteLine(product.UniquePropertyString());
+                    Console.WriteLine();
                     totalSum += product.Price;
                 }
 

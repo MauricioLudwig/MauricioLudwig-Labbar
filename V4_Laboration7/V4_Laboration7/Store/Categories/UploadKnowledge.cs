@@ -23,5 +23,10 @@ namespace V4_Laboration7
                 base.ProductParameterValues(),
                 DataTransferTime);
         }
+
+        public override string UniquePropertyString()
+        {
+            return " minutes (Data Transfer Time)";
+        }
     }
 }

@@ -23,5 +23,10 @@ namespace V4_Laboration7
                 base.ProductParameterValues(),
                 Weight);
         }
+
+        public override string UniquePropertyString()
+        {
+            return " kg (Weight)";
+        }
     }
 }

@@ -23,5 +23,10 @@ namespace V4_Laboration7
                 base.ProductParameterValues(),
                 Longevity);
         }
+
+        public override string UniquePropertyString()
+        {
+            return " years (Longevity)";
+        }
     }
 }

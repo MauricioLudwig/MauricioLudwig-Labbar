@@ -27,5 +27,10 @@ namespace V4_Laboration7
                 Price,
                 IsNew == true ? "Yes" : "No");
         }
+
+        public virtual string UniquePropertyString()
+        {
+            return String.Format("");
+        }
     }
 }
