@@ -10,6 +10,8 @@ namespace V6_Laboration12
     {
         static void Main(string[] args)
         {
+            var client = new Client();
+            client.Start();
         }
     }
 }
