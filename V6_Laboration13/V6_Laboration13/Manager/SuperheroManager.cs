@@ -40,18 +40,29 @@ namespace V6_Laboration13.Manager
 
             Console.Write(Environment.NewLine + "Name: ");
             string name = Console.ReadLine();
+
             if (!(name.Length < 2 || name.Length > 10))
                 newHero.Name = name;
             else
             {
-                OnInvalidInput();
-                Console.WriteLine("Press enter to continue.");
+                OnInvalidInput("Name must be between 3 and 10 characters.");
+                Console.WriteLine("Operation was canceled. Enter to return.");
                 Console.ReadKey();
                 return;
             }
 
             Console.Write("Number of sidekicks: ");
-            newHero.Sidekicks = int.Parse(Console.ReadLine());
+            int number = int.Parse(Console.ReadLine());
+
+            if (!(number < 0))
+                newHero.Sidekicks = number;
+            else
+            {
+                OnInvalidInput("Number must be greater or equal to 0.");
+                Console.WriteLine("Operation was canceled. Enter to return.");
+                Console.ReadKey();
+                return;
+            }
 
             newHero.Ability = GetAbility();
 
@@ -91,9 +102,9 @@ namespace V6_Laboration13.Manager
                 Console.WriteLine("Nothing found.");
         }
 
-        protected virtual void OnInvalidInput()
+        protected virtual void OnInvalidInput(string message)
         {
-            InvalidInput?.Invoke();
+            InvalidInput?.Invoke(message);
         }
     }
 }

@@ -19,10 +19,10 @@ namespace V6_Laboration13
             bool loop = true;
 
             SuperheroMgr = new SuperheroManager();
-            SuperheroMgr.InvalidInput += () =>
+            SuperheroMgr.InvalidInput += (message) =>
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Invalid input! String must be between 3-9 characters.");
+                Console.WriteLine("Invalid input! " + message);
                 Console.ResetColor();
             };
 

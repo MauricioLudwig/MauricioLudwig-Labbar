@@ -8,5 +8,5 @@ using V6_Laboration13.Models;
 namespace V6_Laboration13
 {
     public delegate bool Filter(Superhero superheroes);
-    public delegate void ErrorMsg();
+    public delegate void ErrorMsg(string message);
 }
