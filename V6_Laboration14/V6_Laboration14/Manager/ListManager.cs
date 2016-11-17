@@ -103,7 +103,8 @@ namespace V6_Laboration14.Manager
             Publications.AddRange(Papers);
 
             SearchQuery = Publications
-                .Where(author => author.Author.Name.ToLower().Contains(search.ToLower()))
+                .Where(publication => publication.Author.Name.ToLower().Contains(search.ToLower()))
+                .OrderBy(publication => publication.Title)
                 .ToList();
 
             if (SearchQuery == null || SearchQuery.Count == 0)
