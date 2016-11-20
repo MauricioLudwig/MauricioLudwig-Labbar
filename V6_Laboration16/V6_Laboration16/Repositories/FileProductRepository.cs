@@ -14,17 +14,10 @@ namespace V6_Laboration16.Repositories
     {
 
         private List<Product> products;
-        private string jsonFromFile;
-        private string jsonString;
         private string file;
 
         public FileProductRepository()
         {
-            products = new List<Product>()
-            {
-                new Product { Name = "Computer", Price = 1000, Category = Product.Categories.Hardware }
-            };
-            
             var directory = Environment.CurrentDirectory;
             file = String.Format("{0}{1}", directory, @"\data.json");
 
@@ -33,6 +26,22 @@ namespace V6_Laboration16.Repositories
 
             if ((!File.Exists(file)))
                 File.Create(file);
+            else
+            {
+                var jsonFromFile = File.ReadAllText(file);
+
+                if (!(String.IsNullOrEmpty(jsonFromFile) || jsonFromFile == "null"))
+                {
+                    products = JsonConvert.DeserializeObject<List<Product>>(jsonFromFile);
+                }
+                else
+                {
+                    products = new List<Product>()
+                    {
+                        new Product { Name = "Computer", Price = 2500, Category = Product.Categories.Hardware }
+                    };
+                }
+            }
 
             UpdateFile();
         }
@@ -69,10 +78,10 @@ namespace V6_Laboration16.Repositories
 
         private void UpdateFile()
         {
-            jsonString = JsonConvert.SerializeObject(products);
+            string jsonString = JsonConvert.SerializeObject(products);
             File.WriteAllText(file, jsonString);
 
-            jsonFromFile = File.ReadAllText(file);
+            var jsonFromFile = File.ReadAllText(file);
             products = JsonConvert.DeserializeObject<List<Product>>(jsonFromFile);
         }
     }
