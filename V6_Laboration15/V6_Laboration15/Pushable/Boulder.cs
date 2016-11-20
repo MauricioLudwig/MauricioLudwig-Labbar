@@ -9,7 +9,7 @@ namespace V6_Laboration15
     {
         public void Push()
         {
-
+            Console.WriteLine("Push.");
         }
     }
 }

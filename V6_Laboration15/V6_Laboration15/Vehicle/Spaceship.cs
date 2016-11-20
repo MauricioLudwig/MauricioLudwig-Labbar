@@ -9,18 +9,22 @@ namespace V6_Laboration15
     {
         public void Lock()
         {
+            Console.WriteLine("Lock.");
         }
 
         public void Start()
         {
+            Console.WriteLine("Start.");
         }
 
         public void Stop()
         {
+            Console.WriteLine("Stop.");
         }
 
         public void Unlock()
         {
+            Console.WriteLine("Unlock.");
         }
     }
 }
