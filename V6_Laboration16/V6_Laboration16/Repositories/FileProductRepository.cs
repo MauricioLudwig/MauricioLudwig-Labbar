@@ -25,22 +25,20 @@ namespace V6_Laboration16.Repositories
                 Directory.CreateDirectory(directory);
 
             if ((!File.Exists(file)))
-                File.Create(file);
+                File.Create(file).Close();
+
+            var jsonFromFile = File.ReadAllText(file);
+
+            if (!(String.IsNullOrEmpty(jsonFromFile) || jsonFromFile == "null"))
+            {
+                products = JsonConvert.DeserializeObject<List<Product>>(jsonFromFile);
+            }
             else
             {
-                var jsonFromFile = File.ReadAllText(file);
-
-                if (!(String.IsNullOrEmpty(jsonFromFile) || jsonFromFile == "null"))
-                {
-                    products = JsonConvert.DeserializeObject<List<Product>>(jsonFromFile);
-                }
-                else
-                {
-                    products = new List<Product>()
+                products = new List<Product>()
                     {
                         new Product { Name = "Computer", Price = 2500, Category = Product.Categories.Hardware }
                     };
-                }
             }
 
             UpdateFile();
